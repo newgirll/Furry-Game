@@ -61,15 +61,12 @@ var Game = function(){
             case 37:
                 this.furry.direction = 'left';
                 break;
-            
             case 39:
                 this.furry.direction = 'right';
                 break;
-            
             case 38:
                 this.furry.direction = 'up';
                 break;
-            
             case 40:
                 this.furry.direction = 'down';
                 break;
@@ -90,8 +87,8 @@ var Game = function(){
             this.score.innerText = this.score;
             this.coin = new Coin();
             game.showCoin();
-            }
         }
+    };
        
         
     this.gameOver = function() {
