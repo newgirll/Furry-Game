@@ -4,16 +4,11 @@ var Coin = require("./coin.js");
 
 
 // przechowuje pozycje furrego, monetę, plansze i wynik 
-var Game = function(){
-        
+var Game = function(){ 
     this.board = document.querySelectorAll("#board div");
-        
     this.furry = new Furry();
-        
     this.coin = new Coin();
-        
     this.score = 0;
-        
     this.index = function(x,y) {
         
         return x + (y * 10);
@@ -21,7 +16,6 @@ var Game = function(){
         
 
     this.showFurry = function(){
-        
         game.hideVisibleFurry();
              
         return this.board[ this.index(this.furry.x,this.furry.y)].classList.add('furry');
@@ -29,8 +23,7 @@ var Game = function(){
     };
         
         
-    this.hideVisibleFurry = function(){
-                
+    this.hideVisibleFurry = function(){ 
         this.furryHide = document.querySelector('.furry');
                     
         if(this.furryHide !== null){
@@ -41,13 +34,11 @@ var Game = function(){
         
 
     this.showCoin = function(){
-        
         return this.board[ this.index(this.coin.x,this.coin.y)].classList.add('coin');
     };
         
         
     this.moveFurry = function(){
-        
         if(this.furry.direction === 'right'){
             this.furry.x = this.furry.x + 1;
         } else if (this.furry.direction === 'left'){
@@ -65,8 +56,7 @@ var Game = function(){
     };
         
 
-    this.turnFurry = function(event) {
-               
+    this.turnFurry = function(event) {   
         switch (event.which) {
             case 37:
                 this.furry.direction = 'left';
@@ -105,7 +95,6 @@ var Game = function(){
        
         
     this.gameOver = function() {
-        
         if(this.furry.x < 0 || this.furry.x > 9 || this.furry.y < 0 || this.furry.y > 9){
         
             clearInterval(self.idSetInterval);
