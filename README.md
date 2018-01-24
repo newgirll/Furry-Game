@@ -5,7 +5,7 @@ Basic rule is to catch as many coins as it is possible.
 The coins are showing up randomly on the board.
 To move Furry use your arrows keys: up(up arrow), down( down arrow), left( left arrow), right(right arrow).
 The game ends when you hit the wall.
-#Enjoy your game!
+# Enjoy your game!
 
 
 ## Set up
