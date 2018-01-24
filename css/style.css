@@ -74,3 +74,7 @@ section#over pre {
 .invisible {
   display: none;
 }
+
+.header{
+  text-align: center;
+}
