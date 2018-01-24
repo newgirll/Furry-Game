@@ -110,9 +110,13 @@ var Game = function(){
         
             clearInterval(self.idSetInterval);
             game.hideVisibleFurry();
-            var header = document.createElement("h1");
-            header.innerText = "GAME OVER" + "YOUR RESULT: " + this.score;
+            let header = document.createElement("h1");
+            let textScore = document.createElement("p");
+            header.className = "header";
+            header.innerText = "GAME OVER "
+            textScore.innerText =  "Your result : " + this.score;
             document.querySelector("body").appendChild(header);
+            header.appendChild(textScore);
                     
         }
         
